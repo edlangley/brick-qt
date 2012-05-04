@@ -499,8 +499,8 @@ int GLWidget::installShaders()
 
     brickProg.setUniformValue("BrickColor", QVector3D(1.0, 0.3, 0.2));
     brickProg.setUniformValue("MortarColor", QVector3D(0.85, 0.86, 0.84));
-    brickProg.setUniformValue("BrickSize", QVector2D(0.30, 0.15));
-    brickProg.setUniformValue("BrickPct", QVector2D(0.90, 0.85));
+    brickProg.setUniformValue("BrickSize", QVector3D(0.30, 0.15, 0.30));
+    brickProg.setUniformValue("BrickPct", QVector3D(0.90, 0.85, 0.90));
     brickProg.setUniformValue("LightPosition", QVector3D(0.0, 0.0, 4.0));
 
     return 0;

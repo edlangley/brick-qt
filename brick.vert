@@ -15,7 +15,7 @@ const float SpecularContribution = 0.3;
 const float DiffuseContribution  = 1.0 - SpecularContribution;
 
 varying float LightIntensity;
-varying vec2  MCposition;
+varying vec3  MCposition;
 
 void main(void)
 {
@@ -36,6 +36,6 @@ void main(void)
     LightIntensity  = DiffuseContribution * diffuse +
                       SpecularContribution * spec;
 
-    MCposition      = gl_Vertex.xy;
+    MCposition      = gl_Vertex.xyz;
     gl_Position     = ftransform();
 }
